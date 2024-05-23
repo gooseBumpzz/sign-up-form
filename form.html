@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up form</title>
+    <script src="script.js" defer></script>
     <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="container">
         <div id="lblock">
             <!-- <img src="fern.jpg" alt="Image of Green Fern"> -->
+            <div id="logo-block">
+                <div id="logo"></div>
+                <div id="logo-text">Odin</div>
+
+            </div>
         </div>
 
         <div id="rblock">
             <form action="results.html" method="get">
                 <div class="rchild" id="child-1">
-                    <p>Learn more about body intelligence to get in tune with your body and improve quality of your life</p>
+                    <p>Everybody should learn how to program a computer...because it teaches you how to think.</p>
                     <p>Sign up here.</p>
                 </div>
 
@@ -30,32 +36,32 @@
 
                     <div class="form-el">
                         <label for="lname">LAST NAME </label>
-                        <input id="lname" name="lname" type="text" required>
+                        <input id="lname"  name="lname" type="text" required >
                         <span></span>
                     </div>
 
                     <div class="form-el">
                         <label for="email">EMAIL: </label>
-                        <input id="email" name="email" type="email" required>
+                        <input id="email" name="email" type="email" data-help="Format email@email.com" required>
                         <span></span>
                     </div>
 
                     <div class="form-el">
                         <label for="phone">PHONE NUMBER </label>
-                        <input id="phone" name="phone" type="tel" required>
+                        <input id="phone" name="phone" type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="ex. 555-555-5555" required>
                         <span></span>
                     </div>
 
                     <div class="form-el">
                         <label for="password">PASSWORD </label>
-                        <input id="password" name="password" type="password" required>
+                        <input id="password" name="password" type="password" onkeyup="check()" required >
                         <span></span>
                     </div>
 
                     <div class="form-el">
                         <label for="cpassword">CONFIRM PASSWORD </label>
-                        <input id="cpassword" name="cpassword" type="password" required>
-                        <span></span>
+                        <input id="c_password" name="c_password" type="password" onkeyup="check()" required>
+                        <span id='message'></span>
                     </div>
                 </div>
                 
